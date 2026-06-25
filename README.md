@@ -1,10 +1,21 @@
-# Ruffy-Test
+# Ruffy Test API
 
-Ein Test-Repository für Ruffy (den KI-Assistenten).
+A simple Express.js API server with one endpoint:
 
-## Was entsteht
+- `GET /hello` returns `{ "message": "Hello from Ruffy!" }`
 
-- GitHub Repo anlegen
-- README hinzufügen
-- Codex CLI für Projekte starten
-- Auf einem Hosting VPS deployen
+## Run Locally
+
+```bash
+npm install
+npm start
+```
+
+The server listens on port `3000` by default. You can override it with the `PORT` environment variable.
+
+## Run With Docker
+
+```bash
+docker build -t ruffy-test-api .
+docker run -p 3000:3000 ruffy-test-api
+```
